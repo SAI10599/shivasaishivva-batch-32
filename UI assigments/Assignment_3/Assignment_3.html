@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            Assigment 3
+        </title>
+    </head>
+    <body>
+        <script>
+            let env ="dev";
+            sending_amount=100;
+
+            if(env=="dev"){
+                sending_amount=sending_amount+((sending_amount/100)*10);
+                console.log(sending_amount);
+            } 
+            else if(env=="test"){
+                sending_amount=sending_amount+((sending_amount/100)*20);
+                console.log(sending_amount);}           
+            else if(env=="stage"){
+                sending_amount=sending_amount+((sending_amount/100)*30);
+                console.log(sending_amount);}
+            else if(env=="prod"){
+                sending_amount=sending_amount+((sending_amount/100)*40);
+                console.log(sending_amount);}
+
+            //Alternative Way
+            //sending_amount= env=="dev" ? sending_amount+(sending_amount/10):sending_amount;
+            //sending_amount= env=="test" ? sending_amount+((sending_amount/100)*20):sending_amount;
+            //sending_amount= env=="stage" ? sending_amount+((sending_amount/100)*30):sending_amount;
+            //sending_amount= env=="prod" ? sending_amount+((sending_amount/100)*40):sending_amount;
+            //console.log(sending_amount)
+
+        </script>
+    </body>
+</html>
