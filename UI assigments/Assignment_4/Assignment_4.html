@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Assigment 4
+        </title>
+    </head>
+    <body>
+        <script>
+            var my_profile={
+                first_name:"shiva sai",
+                last_name:"shivva",
+                DOB:"10th May, 1999",
+                Nationality:"India",
+                Address:"siddipet",
+                blood:"o+",
+                phone:487593649,
+                hobbies:["reading books", "Jogging", "Watching Movies"]
+            }
+
+            function hobby_arr(){
+                my_profile.hobbies.forEach(element => {
+                    document.write(element+ " ") 
+                });
+            }
+            hobby_arr()
+            
+
+            function hobby_add(hobby_new){
+                my_profile.hobbies.push(hobby_new)
+                };
+            hobby_add("playing video games")
+            hobby_arr()
+            function hobby_remove(hobby_new){
+                my_profile.hobbies.pop(hobby_new)
+                };
+            hobby_remove("playing video games")
+            hobby_arr()
+
+        </script>
+    </body>
+</html>
