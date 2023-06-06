@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Assigment 5
+        </title>
+    </head>
+    <body>
+        <div id="print_form">
+        <input type="text" id="first_name" placeholder="First Name"/> <br/>
+        <input type="text" id="last_name" placeholder="Last Name"/><br/>
+        <input type="date" id="DOB" placeholder="Date of Birth" /><br/>
+        <input type="email" id="Email" placeholder="Email"><br/>
+        <input type="text" id="Phone" placeholder="Phone Number"><br/>
+        <button onclick=PrintForm()>Submit</button>
+        </div>
+
+        <script>
+            function PrintForm(){
+                var firstName = document.getElementById("first_name").value;
+                var lastName = document.getElementById("last_name").value;
+                var dob = document.getElementById("DOB").value;
+                var email = document.getElementById("Email").value;
+                var phone = document.getElementById("Phone").value;
+
+                var print= document.getElementById("print_form");
+                print.innerHTML = `
+                <p>First Name: ${firstName}</p>
+                <p>Last Name: ${lastName}</p>
+                <p>Date of Birth: ${dob}</p>
+                <p>Email: ${email}</p>
+                <p>Phone Number: ${phone}</p>
+                `;
+
+                //x=print.innerHTML;
+                //document.write(x);
+                }
+            
+            
+        </script>
+    </body>
+</html>
