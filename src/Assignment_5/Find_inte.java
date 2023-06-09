@@ -1,5 +1,5 @@
 package Assignment_5;
-import java.util.Arrays;
+
 public class Find_inte {
 
     public void find(int a[]){

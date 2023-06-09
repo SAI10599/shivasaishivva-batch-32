@@ -26,7 +26,7 @@ public class Reverse_arr{
             }
 
         }
-        if ((a.length%2)!=0){
+        else if ((a.length%2)!=0){
             while(i<((a.length-1)/2)){
 
                 temp=a[first];
