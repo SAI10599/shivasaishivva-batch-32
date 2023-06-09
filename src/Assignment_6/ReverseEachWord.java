@@ -12,7 +12,7 @@ public class ReverseEachWord {
         for(String word: new_arr)
         {
             StringBuilder rword = new StringBuilder(word);
-            rword.reverse();
+            rword=rword.reverse();
            sb.append(rword).append(" ");
         }
 
