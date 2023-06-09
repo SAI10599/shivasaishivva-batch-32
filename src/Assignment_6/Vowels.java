@@ -1,6 +1,5 @@
-package Assignment_7;
+package Assignment_6;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Vowels {
