@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>
+        Shiva Sai Shivva
+    </title>
+<head>
+<body>
+    <script>
+
+        Array.prototype.second=function(){
+            new_arr=this.sort((a, b) => a - b);
+            return new_arr[1];
+        }
+
+        const a1=[2,4,6,8,1];
+
+        c=a1.second();
+
+        console.log("custom sort with prototype");
+        console.log(c);
+    </script>
+
+    <script class="customer sort"> 
+        const arr=[2,4,6,1,8];
+        
+
+        for(i=0;i<arr.length-1;i++){
+            for(j=0;j<arr.length-i-1;j++){
+                if (arr[j] > arr[j + 1]) {
+
+                    let temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+                
+
+            }      
+        }
+
+        console.log("custom sort with for loop");
+        console.log(arr[1]);
+
+    </script>
+
+</body>
+</html>

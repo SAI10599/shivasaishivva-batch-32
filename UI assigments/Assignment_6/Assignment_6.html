@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assigment 6</title>
+</head>
+<body>
+  <form id="profileForm">
+    
+    <input type="text" id="first_name" placeholder="firstname" required><br>
+
+    <input type="text" id="last_name" placeholder="lastname" required><br>
+
+
+    <select for="gener_2">Gender: 
+        <option id="gener_2" name="male" value="Male">male</option>
+        <option id="gener_2" name="male" value="Female">female</option>
+        <option id="gener_2" name="male" value="other">other</option>
+    </select>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">other</label><br>
+
+    <input type="text" id="email" placeholder="email" required><br>
+
+    <input type="phone" id="phone" placeholder="phone_number" required><br>
+
+    <label for="hobbies">Hobbies:</label><br>
+    <input type="checkbox" id="reading" name="hobbies" value="Reading">
+    <label for="reading">Reading</label><br>
+    <input type="checkbox" id="gaming" name="hobbies" value="Gaming">
+    <label for="gaming">Gaming</label><br>
+    <input type="checkbox" id="cooking" name="hobbies" value="Cooking">
+    <label for="cooking">Cooking</label><br>
+
+    <input type="date" id="DOB" placeholder="Date_of_Birth" required><br>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+
+  <div id="displayInfo" class="display"></div>
+
+  <script>
+    function submitForm() {
+      
+      const firstName = document.getElementById("first_name").value;
+      const lastName = document.getElementById("last_name").value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const email = document.getElementById("email").value;
+      const phnNo = document.getElementById("phone").value;
+      const hobbies = Array.from(document.querySelectorAll('input[name="hobbies"]:checked')).map(hobby => hobby.value);
+      const dob = document.getElementById("DOB").value;
+      const gender_2=document.getElementById("gener_2").value;
+
+      
+      const displayInfo = document.getElementById("displayInfo");
+      displayInfo.innerHTML = `
+        <h3>Profile Information:</h3>
+        <p>First Name: ${firstName}</p>
+        <p>Last Name: ${lastName}</p>
+        <p>Gender: ${gender}</p>
+        <p>Email:${email}</p>
+        <p>Phone Number:${phnNo}</p>
+        <p>Hobbies: ${hobbies.join(", ")}</p>
+        <p>Date of Birth: ${dob}</p>
+        <p>Gender: ${gender_2}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
